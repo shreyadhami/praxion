@@ -8,10 +8,10 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>YOUR COMPANY | Precision Bearings</title>
+    <title>PRAXION MOTION TECHNOLOGIES | Precision Bearings</title>
 
     <meta name="description"
-          content="YOUR COMPANY - Professional bearing supplier providing reliable bearing solutions for industrial, automotive and engineering applications.">
+          content="PRAXION - Professional bearing supplier providing reliable bearing solutions for industrial, automotive and engineering applications.">
 
     <style>
 
@@ -149,7 +149,20 @@
             color: #657482;
         }
 
+        .logo-image {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    display: block;
+}
 
+ .logo-imageF {
+    width: 130px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    background-color: transparent;
+}
         /* NAVIGATION */
 
         .nav-menu {
@@ -436,15 +449,23 @@
         /* =====================================================
            CSS BEARING
         ===================================================== */
-
         .hero-product {
-            width: 43%;
+    position: relative;
+    width: 43%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-            height: 450px;
-
-            position: relative;
-        }
-
+.bearing-image {
+    width: 150%;
+    max-width: 650px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    transform: translateX(45px);
+}
+        
         .bearing {
             width: 280px;
             height: 280px;
@@ -654,7 +675,7 @@
         .section-label {
             color: #0b4ea2;
 
-            font-size: 13px;
+            font-size: 33px;
 
             font-weight: 800;
 
@@ -703,36 +724,24 @@
         }
 
         .about-image {
-            height: 430px;
+    height: 430px;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #eef3f7,
-                    #d9e1e7
-                );
 
-            display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-            place-items: center;
+    position: relative;
+    overflow: hidden;
+}
 
-            position: relative;
-
-            overflow: hidden;
-        }
-
-        .about-image::before {
-            content: "";
-
-            position: absolute;
-
-            width: 400px;
-            height: 400px;
-
-            border: 70px solid rgba(11,78,162,.06);
-
-            border-radius: 50%;
-        }
+.about-bearing-image {
+    width: 105%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
 
         .about-bearing {
             width: 260px;
@@ -1066,7 +1075,7 @@
         .stats {
             background: #0b4ea2;
 
-            padding: 35px 0;
+            padding: 25px 0;
 
             color: #ffffff;
         }
@@ -1303,7 +1312,14 @@
 
         }
 
-
+.product-bearing-image {
+    width: 100%;
+    max-width: 300px;
+    height: 220px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 20px;
+}
         @media (max-width: 900px) {
 
             .menu-button {
@@ -1359,10 +1375,10 @@
             .hero-text {
                 width: 65%;
             }
-
+/* 
             .hero-product {
                 width: 35%;
-            }
+            } */
 
             .bearing-large {
                 right: 0;
@@ -1435,13 +1451,13 @@
             }
 
             .hero-text,
-            .hero-product {
+            /* .hero-product {
                 width: 100%;
             }
 
             .hero-product {
                 height: 280px;
-            }
+            } */
 
             .bearing-large {
 
@@ -1511,6 +1527,550 @@
             cursor: not-allowed;
         }
 
+      /* =========================================
+   ABOUT PRAXION
+========================================= */
+
+.about-section {
+    background: #ffffff;
+    padding: 100px 0 85px;
+    overflow: hidden;
+}
+
+.about-container {
+    width: min(1240px, 90%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 0.75fr;
+
+    gap: 90px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.about-content {
+    padding-top: 5px;
+}
+
+
+/* Eyebrow */
+
+.about-eyebrow {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 30px;
+
+    color: #1559a6;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 3.5px;
+}
+
+.about-eyebrow span {
+    width: 38px;
+    height: 2px;
+
+    background: #1559a6;
+}
+
+
+/* Heading */
+
+.about-content h2 {
+    max-width: 720px;
+
+    margin: 0 0 30px;
+
+    color: #152b43;
+
+    font-size: clamp(42px, 4.5vw, 64px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2.5px;
+
+    font-weight: 400;
+}
+
+.about-content h2 strong {
+    display: block;
+
+    color: #1559a6;
+
+    font-weight: 700;
+}
+
+
+/* Lead paragraph */
+
+.about-lead {
+    max-width: 790px;
+
+    margin: 0 0 22px;
+
+    color: #354d65;
+
+    font-size: 19px;
+
+    line-height: 1.75;
+}
+
+.about-lead strong {
+    color: #172c43;
+}
+
+
+/* Description */
+
+.about-text {
+    max-width: 760px;
+
+    margin: 0;
+
+    color: #65788b;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+.about-text strong {
+    color: #293e55;
+}
+
+
+/* Divider */
+
+.about-divider {
+    width: 100%;
+
+    height: 1px;
+
+    background: #dce3e9;
+
+    margin: 42px 0 0;
+}
+
+
+/* =========================================
+   EXPERIENCE LIST
+========================================= */
+
+.experience-list {
+    border-bottom: 1px solid #dce3e9;
+}
+
+
+.experience-item {
+    display: grid;
+
+    grid-template-columns: 170px 1fr;
+
+    gap: 30px;
+
+    padding: 23px 0;
+
+    border-bottom: 1px solid #edf1f4;
+}
+
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+
+.experience-name {
+    color: #142b43;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+.experience-role {
+    color: #687b8e;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+.experience-role span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #1559a6;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================
+   RIGHT HIGHLIGHT
+========================================= */
+
+.about-highlight {
+    position: relative;
+
+    background: #122b46;
+
+    padding: 22px 42px 38px;
+
+    min-height: 520px;
+
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+
+/* Subtle engineering grid */
+
+.about-highlight::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 35px 35px;
+
+    pointer-events: none;
+}
+
+
+/* Top */
+
+.highlight-top {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.highlight-top span:first-child {
+    color: #aebdca;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.highlight-number {
+    color: #8fa5b9;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   YEARS
+========================================= */
+
+.years {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    margin-top: 35px;
+}
+
+
+.years-number {
+    font-size: 145px;
+
+    line-height: 0.8;
+
+    font-weight: 700;
+
+    letter-spacing: -10px;
+
+    color: #ffffff;
+}
+
+
+.years-plus {
+    margin-top: 5px;
+
+    color: #4e91d3;
+
+    font-size: 52px;
+
+    font-weight: 600;
+}
+
+
+.years-label {
+    position: relative;
+    z-index: 1;
+
+    margin-top: 25px;
+
+    color: #c1ccd6;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   HIGHLIGHT LINE
+========================================= */
+
+.highlight-line {
+    position: relative;
+    z-index: 1;
+
+    width: 48px;
+
+    height: 3px;
+
+    background: #4d91d2;
+
+    margin: 25px 0 18px;
+}
+
+
+.highlight-description {
+    position: relative;
+    z-index: 1;
+
+    max-width: 290px;
+
+    margin: 0;
+
+    color: #aebdca;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   HIGHLIGHT POINTS
+========================================= */
+
+.highlight-points {
+    position: relative;
+    z-index: 1;
+
+    margin-top: 28px;
+
+    border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+
+.highlight-points div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    color: #d6dfe7;
+
+    font-size: 12px;
+}
+
+
+.highlight-points span {
+    color: #4d91d2;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   BOTTOM STATEMENT
+========================================= */
+
+.about-bottom {
+    width: min(1240px, 90%);
+
+    margin: 55px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.bottom-line {
+    width: 45px;
+
+    height: 2px;
+
+    background: #1559a6;
+}
+
+
+.about-bottom p {
+    margin: 0;
+
+    color: #65788b;
+
+    font-size: 15px;
+
+    letter-spacing: 0.3px;
+}
+
+
+.about-bottom strong {
+    color: #20374e;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .about-highlight {
+        min-height: 430px;
+    }
+
+    .years-number {
+        font-size: 120px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .about-section {
+        padding: 70px 0;
+    }
+
+    .about-container {
+        width: 88%;
+    }
+
+    .about-eyebrow {
+        font-size: 12px;
+        letter-spacing: 2.5px;
+    }
+
+    .about-content h2 {
+        font-size: 40px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .about-lead {
+        font-size: 17px;
+    }
+
+    .about-text {
+        font-size: 15px;
+    }
+
+    .experience-item {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+
+        padding: 20px 0;
+    }
+
+    .about-highlight {
+        min-height: 450px;
+
+        padding: 32px;
+    }
+
+    .years-number {
+        font-size: 100px;
+
+        letter-spacing: -7px;
+    }
+
+    .years-plus {
+        font-size: 40px;
+    }
+
+    .about-bottom {
+        width: 88%;
+
+        margin-top: 40px;
+    }
+
+    .about-bottom p {
+        font-size: 13px;
+    }
+
+}
+
 </style>
 
 </head>
@@ -1532,14 +2092,15 @@
 
         <a href="#home" class="logo">
 
-            <div class="logo-bearing">
+            <!-- <div class="logo-bearing">
                 <span></span>
-            </div>
+            </div> -->
 
+            <img src="../images/LOGO.jpeg" alt="Praxion Motion Technologies Logo" class="logo-image">
             <div class="logo-text">
 
                 <strong>
-                    YOUR COMPANY
+                    PRAXION MOTION TECHNOLOGIES
                 </strong>
 
                 <small>
@@ -1559,9 +2120,7 @@
                 Home
             </a>
 
-            <a href="#about">
-                About Us
-            </a>
+            
 
 
             <div class="dropdown">
@@ -1573,19 +2132,23 @@
                 <div class="dropdown-menu">
 
                     <a href="#products">
-                        Ball Bearings
+                        Angular Contact Ball Bearings
                     </a>
 
                     <a href="#products">
-                        Roller Bearings
+                        Cylindrical Roller Bearings
                     </a>
 
-                    <a href="#products">
+                    <!-- <a href="#products">
                         Tapered Roller Bearings
+                    </a> -->
+
+                    <a href="#products">
+                        Angular Contact Thrust Ball Bearings
                     </a>
 
                     <a href="#products">
-                        Needle Bearings
+                        Ball Screw Support Bearings
                     </a>
 
                     <a href="#products">
@@ -1593,17 +2156,17 @@
                     </a>
 
                     <a href="#products">
-                        Pillow Block Bearings
+                        Ball Bearing With Presicion Grade  
                     </a>
 
                 </div>
 
             </div>
 
-
+<!-- 
             <a href="#brands">
                 Brands
-            </a>
+            </a> -->
 
             <a href="#industries">
                 Industries
@@ -1611,6 +2174,10 @@
 
             <a href="#why-us">
                 Why Choose Us
+            </a>
+
+            <a href="#about">
+                About Us
             </a>
 
             <a href="#contact">
@@ -1672,8 +2239,9 @@
 
             <p>
 
-                High performance bearings built for demanding
-                industrial, automotive and engineering applications.
+                High-performance precision bearings for CNC and VMC machines, 
+                designed for demanding high-speed and precision applications.
+
 
             </p>
 
@@ -1705,7 +2273,7 @@
 
         <!-- HERO BEARING -->
 
-        <div class="hero-product">
+        <!-- <div class="hero-product">
 
             <div class="bearing bearing-large">
 
@@ -1736,6 +2304,14 @@
                 </div>
 
             </div>
+
+        </div> -->
+
+        <div class="hero-product">
+
+            <img src="../images/bearing.png"
+            alt="Precision Bearing"
+            class="bearing-image">
 
         </div>
 
@@ -1842,104 +2418,6 @@
 </section>
 
 
-
-<!-- =========================================================
-     ABOUT
-========================================================= -->
-
-<section class="about section" id="about">
-
-    <div class="container about-grid">
-
-
-        <div class="about-image">
-
-            <div class="bearing about-bearing">
-
-                <div class="bearing-inner">
-
-                    <div class="bearing-hole"></div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="about-content">
-
-            <span class="section-label">
-                ABOUT OUR COMPANY
-            </span>
-
-
-            <h2>
-
-                Reliable Bearing Solutions
-
-                <span>
-                    For Modern Industry
-                </span>
-
-            </h2>
-
-
-            <p>
-
-                YOUR COMPANY is a professional bearing supplier
-                providing reliable bearing solutions for industrial,
-                automotive and engineering applications.
-
-            </p>
-
-
-            <p style="margin-top:15px;">
-
-                We focus on quality products, competitive pricing,
-                dependable supply and long-term customer relationships.
-
-            </p>
-
-
-            <div class="about-points">
-
-                <div>
-                    ✓ Quality products
-                </div>
-
-                <div>
-                    ✓ Reliable supply
-                </div>
-
-                <div>
-                    ✓ Competitive pricing
-                </div>
-
-                <div>
-                    ✓ Technical support
-                </div>
-
-            </div>
-
-
-            <a
-                href="#contact"
-                class="btn btn-primary">
-
-                Learn More →
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
 <!-- =========================================================
      PRODUCTS
 ========================================================= -->
@@ -1969,29 +2447,20 @@
 
 
         <div class="product-grid">
-
+<!-- change here -->
 
             <!-- BALL -->
 
             <div class="product-card">
 
-                <div class="product-image">
-
-                    <div class="bearing product-bearing">
-
-                        <div class="bearing-inner">
-
-                            <div class="bearing-hole"></div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+                <img 
+                    src="../images/ANGULAR_CONTACT.png" 
+                    alt="Angular Contact Ball Bearings"
+                    class="product-bearing-image"
+                >
 
                 <h3>
-                    Ball Bearings
+                    Angular Contact Ball Bearings
                 </h3>
 
                 <p>
@@ -1999,9 +2468,9 @@
                     industrial applications.
                 </p>
 
-                <a href="#contact">
+                <!-- <a href="#contact">
                     View Product →
-                </a>
+                </a> -->
 
             </div>
 
@@ -2011,23 +2480,14 @@
 
             <div class="product-card">
 
-                <div class="product-image">
-
-                    <div class="bearing product-bearing">
-
-                        <div class="bearing-inner">
-
-                            <div class="bearing-hole"></div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+                <img 
+                    src="../images/CYLIN.jpeg" 
+                    alt="Angular Contact Ball Bearings"
+                    class="product-bearing-image"
+                >
 
                 <h3>
-                    Roller Bearings
+                    Cylindrical Roller Bearings
                 </h3>
 
                 <p>
@@ -2035,9 +2495,9 @@
                     operating conditions.
                 </p>
 
-                <a href="#contact">
+                <!-- <a href="#contact">
                     View Product →
-                </a>
+                </a> -->
 
             </div>
 
@@ -2045,21 +2505,13 @@
 
             <!-- TAPERED -->
 
-            <div class="product-card">
+            <!-- <div class="product-card">
 
-                <div class="product-image">
-
-                    <div class="bearing product-bearing tapered">
-
-                        <div class="bearing-inner">
-
-                            <div class="bearing-hole"></div>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                <img 
+                    src="../images/TAP.png" 
+                    alt="Angular Contact Ball Bearings"
+                    class="product-bearing-image"
+                >
 
 
                 <h3>
@@ -2074,7 +2526,7 @@
                     View Product →
                 </a>
 
-            </div>
+            </div> -->
 
 
 
@@ -2082,32 +2534,24 @@
 
             <div class="product-card">
 
-                <div class="product-image">
-
-                    <div class="bearing product-bearing needle">
-
-                        <div class="bearing-inner">
-
-                            <div class="bearing-hole"></div>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                <img 
+                    src="../images/aaaaa.png" 
+                    alt="Angular Contact Ball Bearings"
+                    class="product-bearing-image"
+                >
 
 
                 <h3>
-                    Needle Bearings
+                    Angular Contact Thrust Ball Bearings
                 </h3>
 
                 <p>
                     Compact bearing solutions for limited spaces.
                 </p>
 
-                <a href="#contact">
+                <!-- <a href="#contact">
                     View Product →
-                </a>
+                </a> -->
 
             </div>
 
@@ -2117,32 +2561,24 @@
 
             <div class="product-card">
 
-                <div class="product-image">
-
-                    <div class="bearing product-bearing">
-
-                        <div class="bearing-inner">
-
-                            <div class="bearing-hole"></div>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                <img 
+                    src="../images/ball.png" 
+                    alt="Angular Contact Ball Bearings"
+                    class="product-bearing-image"
+                >
 
 
                 <h3>
-                    Thrust Bearings
+                    Ball Screw Support Bearings
                 </h3>
 
                 <p>
                     Designed to handle axial loads efficiently.
                 </p>
 
-                <a href="#contact">
+                <!-- <a href="#contact">
                     View Product →
-                </a>
+                </a> -->
 
             </div>
 
@@ -2152,32 +2588,24 @@
 
             <div class="product-card">
 
-                <div class="product-image">
-
-                    <div class="bearing product-bearing">
-
-                        <div class="bearing-inner">
-
-                            <div class="bearing-hole"></div>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                <img 
+                    src="../images/thrust.png" 
+                    alt="Angular Contact Ball Bearings"
+                    class="product-bearing-image"
+                >
 
 
                 <h3>
-                    Spherical Bearings
+                    Thrust Bearings
                 </h3>
 
                 <p>
                     Reliable performance for demanding applications.
                 </p>
 
-                <a href="#contact">
+                <!-- <a href="#contact">
                     View Product →
-                </a>
+                </a> -->
 
             </div>
 
@@ -2187,28 +2615,24 @@
 
             <div class="product-card">
 
-                <div class="product-image">
-
-                    <div class="pillow-bearing">
-
-                        <div class="bearing-hole"></div>
-
-                    </div>
-
-                </div>
+                <img 
+                    src="../images/pre_grad.png" 
+                    alt="Angular Contact Ball Bearings"
+                    class="product-bearing-image"
+                >
 
 
                 <h3>
-                    Pillow Block Bearings
+                    Ball Bearings with Precision Grade
                 </h3>
 
                 <p>
                     Complete mounted bearing solutions.
                 </p>
 
-                <a href="#contact">
+                <!-- <a href="#contact">
                     View Product →
-                </a>
+                </a> -->
 
             </div>
 
@@ -2216,21 +2640,17 @@
 
             <!-- LINEAR -->
 
-            <div class="product-card">
+            <!-- <div class="product-card">
 
-                <div class="product-image">
-
-                    <div class="linear-bearing">
-
-                        <div></div>
-
-                    </div>
-
-                </div>
+                <img 
+                    src="../images/ANGULAR_CONTACT.png" 
+                    alt="Angular Contact Ball Bearings"
+                    class="product-bearing-image"
+                >
 
 
                 <h3>
-                    Linear Bearings
+                    Ball Bearings
                 </h3>
 
                 <p>
@@ -2243,19 +2663,19 @@
 
             </div>
 
-        </div>
+        </div> -->
 
 
 
         <div class="center-button">
 
-            <a
+            <!-- <a
                 href="#contact"
                 class="btn btn-primary">
 
                 View All Products →
 
-            </a>
+            </a> -->
 
         </div>
 
@@ -2349,16 +2769,16 @@
             <div class="industry-card">
 
                 <div class="industry-icon">
-                    🏗
+                    🧵
                 </div>
 
                 <h3>
-                    Construction
+                    Textile
                 </h3>
 
                 <p>
-                    Heavy-duty bearing solutions for
-                    construction machinery.
+                    Precision bearing solutions for
+                    textile machinery.
                 </p>
 
             </div>
@@ -2543,7 +2963,7 @@
      BRANDS
 ========================================================= -->
 
-<section class="brands section" id="brands">
+<!-- <section class="brands section" id="brands">
 
     <div class="container">
 
@@ -2589,7 +3009,7 @@
 
 </section>
 
-
+ -->
 
 <!-- =========================================================
      STATS
@@ -2642,7 +3062,7 @@
         <div>
 
             <strong>
-                30+
+                100+
             </strong>
 
             <span>
@@ -2654,6 +3074,135 @@
     </div>
 
 </section>
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section class="about-section" id="about">
+
+    <div class="about-container">
+
+        <!-- LEFT CONTENT -->
+        <div class="about-content">
+
+            <div class="about-eyebrow">
+                <span></span>
+                ABOUT PRAXION
+            </div>
+
+            <p class="about-lead">
+                <strong>PRAXION</strong> is an emerging bearing company
+                providing <strong>precision and super precision bearing
+                solutions</strong> for industrial, automotive, and
+                engineering applications across India.
+            </p>
+
+            <p class="about-text">
+                Though relatively new, PRAXION is backed by
+                <strong>30+ years of industry experience</strong>.
+                Our approach combines deep bearing expertise,
+                application knowledge, business understanding, and
+                a strong commitment to customer service.
+            </p>
+
+            <div class="about-divider"></div>
+
+            <!-- EXPERIENCE -->
+            <div class="experience-list">
+
+                <div class="experience-item">
+
+                    <div class="experience-name">
+                        Mr. Parag Dhami
+                    </div>
+
+                    <div class="experience-role">
+                        <span>PRODUCT & INDUSTRY EXPERIENCE</span>
+                        Experienced in precision and super-precision bearings,
+                         with extensive product knowledge and industry experience.
+
+                    </div>
+
+                </div>
+
+
+                <div class="experience-item">
+
+                    <div class="experience-name">
+                        Mr. Kalpesh Dhami
+                    </div>
+
+                    <div class="experience-role">
+                        <span>MARKETING & BUSINESS DEVELOPMENT</span>
+                        Experienced in marketing, business development,
+                        and building strong customer relationships.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT EXPERIENCE PANEL -->
+        <div class="about-highlight">
+
+            <div class="highlight-top">
+                <span>ESTABLISHED EXPERIENCE</span>
+            </div>
+
+
+            <div class="years">
+
+                <span class="years-number">30</span>
+                <span class="years-plus">+</span>
+
+            </div>
+
+            <div class="years-label">
+                YEARS OF<br>
+                INDUSTRY EXPERIENCE
+            </div>
+
+
+            <div class="highlight-line"></div>
+
+
+            <p class="highlight-description">
+                Precision bearing expertise built through decades
+                of industry experience.
+            </p>
+
+
+            <div class="highlight-points">
+
+                <div>
+                    <span>01</span>
+                    Precision Bearings
+                </div>
+
+                <div>
+                    <span>02</span>
+                    Super Precision Solutions
+                </div>
+
+                <div>
+                    <span>03</span>
+                    Pan India Support
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
 
 
 
@@ -2697,7 +3246,7 @@
                     </strong>
 
                     <span>
-                        +91 12345 67890
+                        +91 98207 12562
                     </span>
 
                 </div>
@@ -2710,7 +3259,7 @@
                     </strong>
 
                     <span>
-                        info@yourcompany.com
+                        info@praxion.co.in
                     </span>
 
                 </div>
@@ -2724,8 +3273,8 @@
 
                     <span>
 
-                        123, Industrial Area,<br>
-                        Your City, Maharashtra, India
+                        2, Bhagwan Bhuvan,Ground Floor<br>
+                        Hazrat Abbas Road, Samuel Street, Mumbai - 400009
 
                     </span>
 
@@ -2742,7 +3291,7 @@
         <form
             class="contact-form"
             id="contactForm"
-            action="https://formsubmit.co/ajax/shreya.dhami@somaiya.edu"
+            action="https://formsubmit.co/ajax/info@praxion.co.in"
             method="POST">
             <!-- FormSubmit settings -->
             <!-- Replace info@yourcompany.com in the form action with your real receiving email. -->
@@ -2832,14 +3381,15 @@
 
 
         <div class="footer-company">
+            <img src="../images/LOGO.jpeg" alt="Praxion Motion Technologies Logo" class="logo-imageF">
 
             <div class="footer-logo">
-                YOUR COMPANY
+                PRAXION MOTION TECHNOLOGIES LLP
             </div>
 
             <p>
 
-                Precision bearing solutions for industrial,
+                <br>Precision bearing solutions for industrial,
                 automotive and engineering applications.
 
             </p>
@@ -2885,23 +3435,35 @@
             </h3>
 
             <a href="#products">
-                Ball Bearings
+                Angular Contact Ball Bearings
             </a>
 
             <a href="#products">
-                Roller Bearings
+                Cylindrical Roller Bearings
+            </a>
+
+            <!-- <a href="#products">
+                Tapered Roller Bearings
+            </a> -->
+
+            <a href="#products">
+                Angular Contact Thrust Ball Bearings
             </a>
 
             <a href="#products">
-                Tapered Bearings
+                Ball Screw Support Bearings
             </a>
-
+<!-- 
             <a href="#products">
-                Needle Bearings
-            </a>
+                Thrust Bearings
+            </a> -->
 
             <a href="#products">
                 Thrust Bearings
+            </a>
+            
+            <a href="#products">
+                Ball Bearings with Precision Grade
             </a>
 
         </div>
@@ -2915,17 +3477,17 @@
             </h3>
 
             <p>
-                +91 12345 67890
+                +91 98207 12562
             </p>
 
             <p>
-                info@yourcompany.com
+                info@praxion.co.in
             </p>
 
             <p>
 
-                123, Industrial Area,<br>
-                Your City, Maharashtra
+                 2, Bhagwan Bhuvan,Ground Floor<br>
+                Hazrat Abbas Road, Samuel Street, Mumbai - 400009
 
             </p>
 
@@ -2936,7 +3498,7 @@
 
     <div class="footer-bottom">
 
-        © 2026 YOUR COMPANY.
+        © 2026 Praxion Motion Technologies LLP.
         All Rights Reserved.
 
     </div>
