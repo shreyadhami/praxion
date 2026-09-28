@@ -458,12 +458,11 @@
 }
 
 .bearing-image {
-    width: 150%;
+    width: 100%;
     max-width: 650px;
     height: auto;
     display: block;
     object-fit: contain;
-    transform: translateX(45px);
 }
         
         .bearing {
@@ -1424,102 +1423,241 @@
         }
 
 
-        @media (max-width: 600px) {
+        /* =========================================
+   MOBILE RESPONSIVE
+========================================= */
 
-            .section {
-                padding: 60px 0;
-            }
+@media (max-width: 600px) {
 
-            .logo-text strong {
-                font-size: 16px;
-            }
+    .section {
+        padding: 60px 0;
+    }
 
-            .logo-text small {
-                display: none;
-            }
+    /* HEADER */
+    .header {
+        height: 70px;
+    }
 
-            .hero {
-                min-height: 700px;
-            }
+    .navbar {
+        padding: 0 15px;
+        gap: 10px;
+    }
 
-            .hero-content {
-                min-height: 700px;
+    .logo {
+        min-width: 0;
+        gap: 6px;
+    }
 
-                flex-direction: column;
+    .logo-image {
+        width: 75px;
+        height: 55px;
+        flex-shrink: 0;
+    }
 
-                justify-content: center;
-            }
+    .logo-text strong {
+        font-size: 14px;
+        line-height: 1.1;
+        white-space: nowrap;
+    }
 
-            .hero-text,
-            /* .hero-product {
-                width: 100%;
-            }
+    .logo-text small {
+        display: none;
+    }
 
-            .hero-product {
-                height: 280px;
-            } */
+    .menu-button {
+        display: block;
+        font-size: 26px;
+        margin-left: auto;
+    }
 
-            .bearing-large {
+    /* MOBILE NAVIGATION */
+    .nav-menu {
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+    }
 
-                width: 190px;
-                height: 190px;
 
-                right: 50%;
-                top: 30px;
+    /* =========================================
+       HERO
+    ========================================= */
 
-                transform:
-                    translateX(50%);
-            }
+    .hero {
+        min-height: auto;
+        overflow: hidden;
+    }
 
-            .bearing-large .bearing-inner {
-                inset: 25px;
-            }
+    .hero-content {
+        min-height: auto;
+        padding: 60px 20px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-            .bearing-large .bearing-hole {
-                width: 55px;
-                height: 55px;
-            }
+    .hero-text {
+        width: 100%;
+        text-align: center;
+        order: 1;
+    }
 
-            .benefits-grid,
-            .product-grid,
-            .industry-grid,
-            .brand-grid,
-            .stats-grid,
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
+    .hero-label {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        margin-bottom: 15px;
+    }
 
-            .benefit {
-                border-right: none;
+    .hero h1 {
+        font-size: clamp(32px, 9vw, 42px);
+        line-height: 1.08;
+        word-break: normal;
+    }
 
-                border-bottom:
-                    1px solid #dce3e9;
-            }
+    .hero h1 span {
+        margin-top: 5px;
+    }
 
-            .form-row {
-                grid-template-columns: 1fr;
-            }
+    .hero p {
+        width: 100%;
+        max-width: 420px;
+        margin: 20px auto;
+        font-size: 16px;
+        line-height: 1.7;
+    }
 
-            .section-heading h2,
-            .about-content h2,
-            .why-grid h2,
-            .contact-info h2 {
-                font-size: 30px;
-            }
+    .hero-buttons {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
 
-            .hero h1 {
-                font-size: 38px;
-            }
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 320px;
+    }
 
-            .hero-buttons {
-                flex-direction: column;
-            }
 
-            .hero-buttons .btn {
-                width: 100%;
-            }
+    /* HERO BEARING IMAGE */
 
-        }
+    .hero-product {
+        width: 100%;
+        height: auto;
+        min-height: 230px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: 2;
+        margin-top: 25px;
+    }
+
+    .bearing-image {
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+        transform: none;
+        object-fit: contain;
+    }
+
+
+    /* BENEFITS */
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit {
+        border-right: none;
+        border-bottom: 1px solid #dce3e9;
+        padding: 18px 20px;
+    }
+
+    .benefit:last-child {
+        border-bottom: none;
+    }
+
+
+    /* HEADINGS */
+
+    .section-heading h2,
+    .about-content h2,
+    .why-grid h2,
+    .contact-info h2 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+
+    /* PRODUCTS */
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-bearing-image {
+        max-width: 260px;
+        height: 200px;
+    }
+
+
+    /* INDUSTRIES */
+
+    .industry-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ABOUT */
+
+    .about-grid,
+    .why-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* BRANDS */
+
+    .brand-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* STATS */
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+
+    /* CONTACT FORM */
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 25px 20px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+
+    /* BUTTONS */
+
+    .quote-button {
+        display: none;
+    }
+
+}
 
     
         .contact-form button:disabled {
